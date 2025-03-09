@@ -78,27 +78,6 @@
                 text-align: center;
             }
         }
-        .chat-container {
-            margin-top: 20px;
-            padding: 20px;
-            background: #f9f9f9;
-            border-radius: 10px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .chat-box {
-            height: 300px;
-            overflow-y: auto;
-            border: 1px solid #ccc;
-            padding: 10px;
-            background: white;
-        }
-        .chat-input {
-            width: 80%;
-            padding: 10px;
-            margin-top: 10px;
-        }
     </style>
 </head>
 <body>
@@ -144,38 +123,9 @@
             </div>
         </div>
         
-        <div class="chat-container">
-            <h2>💬 Chat con el GPT</h2>
-            <div class="chat-box" id="chatBox"></div>
-            <input type="text" id="userInput" class="chat-input" placeholder="Escribe tu pregunta...">
-            <button onclick="sendMessage()">Enviar</button>
-        </div>
+        <button onclick="window.open('https://chat.openai.com/g/g-67c5d283a39081918b4da97631b8f52f-pro1-base-teorica-tac-taller-d', '_blank')">
+            Iniciar Chat con Mi GPT
+        </button>
     </div>
-    
-    <script>
-        async function sendMessage() {
-            let input = document.getElementById("userInput").value;
-            let chatBox = document.getElementById("chatBox");
-            chatBox.innerHTML += `<p><strong>Tú:</strong> ${input}</p>`;
-            document.getElementById("userInput").value = "";
-
-            let response = await fetch("https://api.openai.com/v1/chat/completions", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": "Bearer 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"
-                },
-                body: JSON.stringify({
-                    model: "gpt-4-turbo",
-                    messages: [{ role: "user", content: input }]
-                })
-            });
-
-            let data = await response.json();
-            let reply = data.choices[0].message.content;
-            chatBox.innerHTML += `<p><strong>GPT:</strong> ${reply}</p>`;
-            chatBox.scrollTop = chatBox.scrollHeight;
-        }
-    </script>
 </body>
 </html>

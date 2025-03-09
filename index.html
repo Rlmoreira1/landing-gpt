@@ -124,10 +124,17 @@
 
                 </ul>
             </div>
-        </div>
-        
-        <button onclick="window.open('https://chat.openai.com/g/g-67c5d283a39081918b4da97631b8f52f-pro1-base-teorica-tac-taller-d?say=Hola', '_blank')">Iniciar Chat</button>
-    </div>
+        <button id="startChat">Iniciar Chat con Mi GPT</button>
+
+<script>
+document.getElementById("startChat").addEventListener("click", function() {
+    var chatWindow = window.open("https://chat.openai.com/g/g-67c5d283a39081918b4da97631b8f52f-pro1-base-teorica-tac-taller-d", "_blank");
+    setTimeout(function() {
+        chatWindow.focus();
+    }, 500);
+});
+</script>
+
 
 </body>
 </html>

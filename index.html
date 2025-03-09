@@ -33,7 +33,6 @@
             box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
             border-radius: 10px;
         }
-        /* SECCIÓN DE DOS COLUMNAS */
         .content {
             display: flex;
             justify-content: space-between;
@@ -44,7 +43,7 @@
         }
         .column {
             flex: 1;
-            min-width: 45%; /* Garantiza que ocupen la mitad del ancho en pantallas grandes */
+            min-width: 45%;
             padding: 20px;
             background-color: #e8f0ff;
             border-radius: 10px;
@@ -69,7 +68,6 @@
         button:hover {
             background-color: #002d5a;
         }
-        /* RESPONSIVE DESIGN: APILAR COLUMNAS EN PANTALLAS PEQUEÑAS */
         @media (max-width: 768px) {
             .content {
                 flex-direction: column;
@@ -97,7 +95,7 @@
             <div class="column">
                 <h2>📌 Instrucciones de Uso</h2>
                 <ul>
-                    <li>Realiza una pregunta lo mas detallada posible sobre los temas</li>
+                    <li>Realiza una pregunta lo más detallada posible sobre los temas.</li>
                     <li>GPT te responderá con la necesaria precisión y pertinencia.</li>
                     <li>Realiza varias preguntas o pide mayor detalle en las respuestas para mayor y mejor conocimiento.</li>
                     <li>Es posible realizar imágenes que tengan relación con los criterios de diseño de la arquitectura y el arte moderno.</li>
@@ -109,32 +107,32 @@
                 <ul>
                     <li>📐 Arquitectura Moderna.</li>
                     <li>🎨 Las vanguardias artísticas.</li>
-                    <li>👨Mies y Le Corbusier.</li>
-                    <li>👴 El  pensamiento de Helio Piñón.</li>
+                    <li>👨 Mies y Le Corbusier.</li>
+                    <li>👴 El pensamiento de Helio Piñón.</li>
                     <li>🏃 El Proceso Proyectual del Taller D.</li>
                     <li>🔍 Atributos de la Modernidad.</li>
                     <li>✏️ Materiales de proyecto.</li>
-                    <li>☕ Los cafés de Helio Piñon.</li>
+                    <li>☕ Los cafés de Helio Piñón.</li>
                     <li>📑 Catálogos del Taller D.</li>
                     <li>🎨 Videos de las Charlas en Común, Ciclo anual de charlas internacionales de arquitectura.</li>
                     <li>🏰 Modelos protocolizados del TAC en Sketchup Warehouse para descargar.</li>
                     <li>🎨 Generación de imágenes con IA.</li>
-					<li>☝️ Otros temas del Taller</li>
+                    <li>☝️ Otros temas del Taller.</li>
                     <li>🔗 Cómo compartir tus chats.</li>
-
                 </ul>
             </div>
+        </div>
+        
         <button id="startChat">Iniciar Chat con Mi GPT</button>
-
-<script>
-document.getElementById("startChat").addEventListener("click", function() {
-    var chatWindow = window.open("https://chat.openai.com/g/g-67c5d283a39081918b4da97631b8f52f-pro1-base-teorica-tac-taller-d", "_blank");
-    setTimeout(function() {
-        chatWindow.focus();
-    }, 500);
-});
-</script>
-
-
+        
+        <script>
+            document.getElementById("startChat").addEventListener("click", function() {
+                var chatWindow = window.open("https://chat.openai.com/g/g-67c5d283a39081918b4da97631b8f52f-pro1-base-teorica-tac-taller-d?say=Hola", "_blank");
+                setTimeout(function() {
+                    chatWindow.focus();
+                }, 500);
+            });
+        </script>
+    </div>
 </body>
 </html>

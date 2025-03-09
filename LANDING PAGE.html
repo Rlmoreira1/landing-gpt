@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a Nuestro GPT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+        .header {
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .header img {
+            max-width: 150px;
+            vertical-align: middle;
+        }
+        .banner {
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        /* SECCIÓN DE DOS COLUMNAS */
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .column {
+            flex: 1;
+            min-width: 45%; /* Garantiza que ocupen la mitad del ancho en pantallas grandes */
+            padding: 20px;
+            background-color: #e8f0ff;
+            border-radius: 10px;
+            text-align: left;
+        }
+        h2 {
+            color: #000000;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        button {
+            background-color: #aaaaaa;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #002d5a;
+        }
+        /* RESPONSIVE DESIGN: APILAR COLUMNAS EN PANTALLAS PEQUEÑAS */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .column {
+                min-width: 90%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <img src="logo_taller.png" alt="Logo del Taller">
+    </div>
+    <img src="banner.jpg" alt="Banner" class="banner">
+    
+    <div class="container">
+        <h1>Bienvenido a Nuestro GPT</h1>
+        <p>Explora nuestras herramientas avanzadas de generación de texto e imágenes con IA.</p>
+        
+        <div class="content">
+            <div class="column">
+                <h2>📌 Instrucciones de Uso</h2>
+                <ul>
+                    <li>Realiza una pregunta lo mas detallada posible sobre los temas</li>
+                    <li>GPT te responderá con la necesaria precisión y pertinencia.</li>
+                    <li>Realiza varias preguntas o pide mayor detalle en las respuestas para mayor y mejor conocimiento.</li>
+                    <li>Es posible realizar imágenes que tengan relación con los criterios de diseño de la arquitectura y el arte moderno.</li>
+                    <li>Comparte tus conversaciones con un solo clic.</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h2>🔍 Principales Temas</h2>
+                <ul>
+                    <li>📐 Arquitectura Moderna.</li>
+                    <li>🎨 Las vanguardias artísticas.</li>
+                    <li>👨Mies y Le Corbusier.</li>
+                    <li>👴 El  pensamiento de Helio Piñón.</li>
+                    <li>🏃 El Proceso Proyectual del Taller D.</li>
+                    <li>🔍 Atributos de la Modernidad.</li>
+                    <li>✏️ Materiales de proyecto.</li>
+                    <li>☕ Los cafés de Helio Piñon.</li>
+                    <li>📑 Catálogos del Taller D.</li>
+                    <li>🎨 Videos de las Charlas en Común, Ciclo anual de charlas internacionales de arquitectura.</li>
+                    <li>🏰 Modelos protocolizados del TAC en Sketchup Warehouse para descargar.</li>
+                    <li>🎨 Generación de imágenes con IA.</li>
+					<li>☝️ Otros temas del Taller</li>
+                    <li>🔗 Cómo compartir tus chats.</li>
+
+                </ul>
+            </div>
+        </div>
+        
+        <button onclick="window.open('https://chat.openai.com/g/g-67c5d283a39081918b4da97631b8f52f-pro1-base-teorica-tac-taller-d', '_blank')">Iniciar Chat</button>
+    </div>
+
+</body>
+</html>

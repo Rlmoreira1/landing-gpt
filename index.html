@@ -123,20 +123,23 @@
             </div>
         </div>
         
-  <script>
+<script>
 function openChatGPT() {
-    var mobileURL = "intent://chat.openai.com/g/g-67c5d283a39081918b4da97631b8f52f-pro1-base-teorica-tac-taller-d#Intent;scheme=https;package=com.android.chrome;end;";
+    var mobileURL = "https://chat.openai.com/g/g-67c5d283a39081918b4da97631b8f52f-pro1-base-teorica-tac-taller-d";
     var pcURL = "https://chat.openai.com/g/g-67c5d283a39081918b4da97631b8f52f-pro1-base-teorica-tac-taller-d";
 
     if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-        // Si es móvil, abrir la URL con intent://
+        // Si es móvil, abrir en la misma ventana
         window.location.href = mobileURL;
     } else {
-        // Si es PC, abrir la URL normal
+        // Si es PC, abrir en una nueva pestaña
         window.open(pcURL, "_blank");
     }
 }
 </script>
+
+<button onclick="openChatGPT()">Iniciar Chat con Mi GPT</button>
+
 
 <button onclick="openChatGPT()">Iniciar Chat con Mi GPT</button>
 

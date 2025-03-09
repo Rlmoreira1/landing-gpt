@@ -127,15 +127,13 @@
 function openChatGPT() {
     var gptURL = "https://chat.openai.com/g/g-67c5d283a39081918b4da97631b8f52f-pro1-base-teorica-tac-taller-d";
 
-    if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-        // Si es móvil, abrir en la misma ventana para evitar problemas de redirección
-        window.location.href = gptURL;
-    } else {
-        // Si es PC, abrir en una nueva pestaña
-        window.open(gptURL, "_blank");
-    }
+    // Redirigir en móviles y PC de manera estable
+    window.open(gptURL, "_blank");
 }
 </script>
+
+<button onclick="openChatGPT()">Iniciar Chat con Mi GPT</button>
+
 
 <button onclick="openChatGPT()">Iniciar Chat con Mi GPT</button>
 
